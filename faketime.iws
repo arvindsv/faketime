@@ -66,10 +66,19 @@
       <file leaf-file-name="ClassTransformer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/time/ClassTransformer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="280" selection-end="368" vertical-scroll-proportion="0.0">
+            <state line="67" column="0" selection-start="1656" selection-end="2667" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CtClass.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/CtClass.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="128" column="35" selection-start="5758" selection-end="5758" vertical-scroll-proportion="0.32">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,7 +86,7 @@
       <file leaf-file-name="TimeChangingTransformer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/time/TimeChangingTransformer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.49790794">
+            <state line="29" column="52" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.53974897">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,19 +94,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="System.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/System.java">
+      <file leaf-file-name="ClassPool.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/ClassPool.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="325" column="35" selection-start="11600" selection-end="11617" vertical-scroll-proportion="0.0">
+            <state line="79" column="29" selection-start="3958" selection-end="3958" vertical-scroll-proportion="-9.2">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MANIFEST.MF" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+      <file leaf-file-name="ClassLoader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/ClassLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="29" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
+            <state line="173" column="24" selection-start="6932" selection-end="6932" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="System.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/System.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="9" selection-start="1428" selection-end="1428" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,7 +124,7 @@
       <file leaf-file-name="TransformerRegistrar.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/time/TransformerRegistrar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="46" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
+            <state line="8" column="33" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,37 +144,10 @@
       <file leaf-file-name="ClassTransformerTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ClassTransformerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
+            <state line="6" column="34" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InputStream.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/../Classes/classes.jar!/java/io/InputStream.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="25" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddMethodAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/time/AddMethodAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="11" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Abc.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/time/Abc.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="38" selection-end="110" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -180,12 +171,14 @@
         <option value="$PROJECT_DIR$/src/ClassTransformer.java" />
         <option value="$PROJECT_DIR$/src/org/time/AddMethodAdapter.java" />
         <option value="$PROJECT_DIR$/src/org/time/JavassistRun.java" />
-        <option value="$PROJECT_DIR$/test/ClassTransformerTest.java" />
-        <option value="$PROJECT_DIR$/src/org/time/ClassTransformer.java" />
         <option value="$PROJECT_DIR$/src/org/time/Abc.java" />
         <option value="$PROJECT_DIR$/src/org/time/TransformerRegistrar.java" />
-        <option value="$PROJECT_DIR$/src/org/time/TimeChangingTransformer.java" />
         <option value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+        <option value="$PROJECT_DIR$/test/ClassTransformerTest.java" />
+        <option value="$PROJECT_DIR$/src/org/time/ClassTransformer.java" />
+        <option value="$PROJECT_DIR$/src/org/time/MyClassLoader.java" />
+        <option value="$PROJECT_DIR$/src/java/lang/TimeChangingTransformer.java" />
+        <option value="$PROJECT_DIR$/src/org/time/TimeChangingTransformer.java" />
       </list>
     </option>
   </component>
@@ -296,8 +289,12 @@
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.time" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.time" />
+      <recent name="java.lang" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.ClassTransformerTest.shouldBoo">
@@ -491,7 +488,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.67008984" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.67008984" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -556,27 +553,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/../Classes/classes.jar!/com/sun/xml/internal/ws/org/objectweb/asm/Opcodes.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="8" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/Runnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="10" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.36575052">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/util/Calendar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1011" column="28" selection-start="39401" selection-end="39401" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/util/GregorianCalendar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="575" column="40" selection-start="22524" selection-end="22524" vertical-scroll-proportion="0.0">
@@ -591,26 +567,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/ClassPool.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="51" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.32">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/../Classes/classes.jar!/java/io/InputStream.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="25" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/ClassTransformerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -624,22 +584,6 @@
     <entry file="file://$PROJECT_DIR$/src/org/time/Abc.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="38" selection-end="110" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/time/ClassTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="280" selection-end="368" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="325" column="35" selection-start="11600" selection-end="11617" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -658,18 +602,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/time/TransformerRegistrar.java">
+    <entry file="file://$PROJECT_DIR$/test/ClassTransformerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="46" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
+        <state line="6" column="34" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="9" selection-start="1428" selection-end="1428" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/CtClass.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="35" selection-start="5758" selection-end="5758" vertical-scroll-proportion="0.32">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/time/ClassTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="0" selection-start="1656" selection-end="2667" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="173" column="24" selection-start="6932" selection-end="6932" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/time/TransformerRegistrar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="33" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/../Classes/classes.jar!/sun/instrument/InstrumentationImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="31" selection-start="2869" selection-end="2869" vertical-scroll-proportion="0.18478261">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/ClassPool.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="29" selection-start="3958" selection-end="3958" vertical-scroll-proportion="-9.2">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/time/TimeChangingTransformer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.49790794">
+        <state line="29" column="52" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.53974897">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

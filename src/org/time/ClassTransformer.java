@@ -1,6 +1,7 @@
 package org.time;
 
 import javassist.*;
+import javassist.bytecode.Descriptor;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -42,4 +43,27 @@ public class ClassTransformer {
 */
     }
 
+    public void boo2() throws Throwable {
+        String originalName = "currentTimeMillis";
+
+        ClassPool pool = ClassPool.getDefault();
+        CtClass ctClass = pool.get("java.lang.System");
+        ctClass.setName("java.lang.System$ORIGINAL");
+        ctClass.setModifiers(Modifier.PUBLIC);
+        ctClass.getConstructor(Descriptor.ofConstructor(new CtClass[0])).setModifiers(Modifier.PROTECTED);
+
+        CtClass newSystemClass = pool.makeClass("java.lang.System", ctClass);
+
+        CtMethod newMethod = new CtMethod(CtClass.longType, "currentTimeMillis", new CtClass[0], newSystemClass);
+        newMethod.setBody("return java.lang.System$ORIGINAL.currentTimeMillis();");
+        newSystemClass.addMethod(newMethod);
+
+        CtMethod method = ctClass.getDeclaredMethod(originalName);
+
+        CodeConverter converter = new CodeConverter();
+        converter.redirectMethodCall(originalName, method);
+        method.instrument(converter);
+
+        FileUtils.writeByteArrayToFile(new File("/tmp/System.class"), newSystemClass.toBytecode());
+    }
 }

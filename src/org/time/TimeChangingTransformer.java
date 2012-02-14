@@ -3,12 +3,16 @@ package org.time;
 import javassist.ClassPool;
 import javassist.CtClass;
 import javassist.CtMethod;
-import javassist.CtNewMethod;
+import javassist.Modifier;
+import javassist.bytecode.Descriptor;
+import org.apache.commons.io.FileUtils;
 
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.lang.instrument.ClassFileTransformer;
 import java.lang.instrument.IllegalClassFormatException;
 import java.security.ProtectionDomain;
+import java.util.Random;
 
 public class TimeChangingTransformer implements ClassFileTransformer {
     @Override
@@ -18,27 +22,26 @@ public class TimeChangingTransformer implements ClassFileTransformer {
         }
 
         try {
-            String originalName = "currentTimeMillis";
-            String renamedMethodName = "currentTimeMillis$original";
+            FileUtils.writeByteArrayToFile(new File("/tmp/realSystem" + new Random().nextInt() + ".class"), classfileBuffer);
 
-            CtClass ctClass = ClassPool.getDefault().makeClass(new ByteArrayInputStream(classfileBuffer));
-            CtMethod oldMethod = ctClass.getDeclaredMethod(originalName);
-            oldMethod.setName(renamedMethodName);
+            String timeMethodName = "currentTimeMillis";
+            String renamedSystemClassName = "java.lang.System$ORIGINAL";
 
-            CtMethod newMethod = CtNewMethod.copy(oldMethod, originalName, ctClass, null);
+            ClassPool pool = ClassPool.getDefault();
+            CtClass originalSystemClass = pool.makeClass(new ByteArrayInputStream(classfileBuffer));
+            originalSystemClass.setName(renamedSystemClassName);
+            originalSystemClass.setModifiers(Modifier.PUBLIC);
+            originalSystemClass.getConstructor(Descriptor.ofConstructor(new CtClass[0])).setModifiers(Modifier.PROTECTED);
 
-            StringBuffer body = new StringBuffer();
-            body.append("{");
-            body.append("out.println(\"   GOT IT!\");");
-            body.append("long result = " + renamedMethodName + "();");
-            body.append("out.println(\"   DONE!\");");
-            body.append("return result;");
-            body.append("}");
+            CtClass newSystemClass = pool.makeClass(new ByteArrayInputStream(classfileBuffer));
+            newSystemClass.setName("java.lang.System");
+            CtMethod newMethod = newSystemClass.getDeclaredMethod(timeMethodName);
+            newMethod.setBody("return " + renamedSystemClassName + "." + timeMethodName + "();");
 
-            newMethod.setBody(body.toString());
-            ctClass.addMethod(newMethod);
-            return ctClass.toBytecode();
+            FileUtils.writeByteArrayToFile(new File("/tmp/oldSystem" + new Random().nextInt() + ".class"), originalSystemClass.toBytecode());
+            FileUtils.writeByteArrayToFile(new File("/tmp/newSystem" + new Random().nextInt() + ".class"), newSystemClass.toBytecode());
 
+            return newSystemClass.toBytecode();
         } catch (Throwable e) {
             System.out.println(e);
             throw new RuntimeException(e);
