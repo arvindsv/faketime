@@ -14,7 +14,8 @@ public class TimeChangingTransformer implements ClassFileTransformer {
             return null;
         }
 
-        return changeTimeMethod(classfileBuffer);
+        return null;
+//        return changeTimeMethod(classfileBuffer);
     }
 
     public byte[] changeTimeMethod(byte[] classfileBuffer) {

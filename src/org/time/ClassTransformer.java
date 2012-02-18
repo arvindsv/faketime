@@ -66,4 +66,26 @@ public class ClassTransformer {
 
         FileUtils.writeByteArrayToFile(new File("/tmp/System.class"), newSystemClass.toBytecode());
     }
+
+    public void boo3() throws Throwable {
+        String originalName = "currentTimeMillis";
+
+        ClassPool pool = ClassPool.getDefault();
+        CtClass ctClass = pool.get("java.lang.System");
+
+/*
+        CtMethod newMethod = new CtMethod(CtClass.longType, "currentTimeMillis", new CtClass[0], ctClass);
+        newMethod.setModifiers(Modifier.PUBLIC);
+        newMethod.setBody("return 0;");
+*/
+
+/*
+        CtMethod method = ctClass.getDeclaredMethod(originalName);
+        CodeConverter converter = new CodeConverter();
+        converter.redirectMethodCall(originalName, method);
+        method.instrument(converter);
+*/
+
+        FileUtils.writeByteArrayToFile(new File("/tmp/System.class"), ctClass.toBytecode());
+    }
 }

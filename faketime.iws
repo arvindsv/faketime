@@ -7,9 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c03e8d54-1519-482b-b46d-0ac03c24f739" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/faketime.ipr" afterPath="$PROJECT_DIR$/faketime.ipr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyThread.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimpleThread.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libagent.jnilib.dSYM/Contents/Info.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libagent.jnilib.dSYM/Contents/Resources/DWARF/libagent.jnilib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libagent.jnilib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/run" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SampleJVMTIAgent.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimpleThread.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/time/fake/Run.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/time/fake/VerboseLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/time/fake/VerboseTranslator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/faketime.iws" afterPath="$PROJECT_DIR$/faketime.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/time/ClassTransformer.java" afterPath="$PROJECT_DIR$/src/org/time/ClassTransformer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/time/TimeChangingTransformer.java" afterPath="$PROJECT_DIR$/src/org/time/TimeChangingTransformer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/time/TransformerRegistrar.java" afterPath="$PROJECT_DIR$/src/org/time/TransformerRegistrar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/ClassTransformerTest.java" afterPath="$PROJECT_DIR$/test/ClassTransformerTest.java" />
     </list>
     <ignored path="faketime.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,6 +40,21 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/org/time/TransformerRegistrar.java" line="28" class="org.time.TransformerRegistrar" package="org.time">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -67,98 +95,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyClassAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/time/MyClassAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="18" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VirtualMachine.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/../Classes/classes.jar!/com/sun/jdi/VirtualMachine.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="12" selection-start="1994" selection-end="1994" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VirtualMachineImpl.class" pinned="false" current="true" current-in-tab="true">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/lib/sa-jdi.jar!/sun/jvm/hotspot/jdi/VirtualMachineImpl.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="173" column="36" selection-start="7817" selection-end="7817" vertical-scroll-proportion="0.33333334">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Opcodes.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/asm-4.0.jar!/org/objectweb/asm/Opcodes.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="8" selection-start="178" selection-end="178" vertical-scroll-proportion="0.32">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassVisitor.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/asm-4.0.jar!/org/objectweb/asm/ClassVisitor.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="22" selection-start="164" selection-end="164" vertical-scroll-proportion="0.32">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassWriter.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/../Classes/classes.jar!/com/sun/xml/internal/ws/org/objectweb/asm/ClassWriter.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MethodWriter.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/../Classes/classes.jar!/com/sun/xml/internal/ws/org/objectweb/asm/MethodWriter.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="6" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeChangingTransformer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/time/TimeChangingTransformer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="32" selection-start="2539" selection-end="2539" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TransformerRegistrar.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/time/TransformerRegistrar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="62" selection-start="503" selection-end="522" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#657#664#0" expanded="true" />
-              </folding>
+            <state line="37" column="25" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassWriter.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/asm-4.0.jar!/org/objectweb/asm/ClassWriter.class">
+      <file leaf-file-name="Run.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/time/fake/Run.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="155" selection-end="155" vertical-scroll-proportion="0.32">
+            <state line="53" column="25" selection-start="1934" selection-end="1934" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="System.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/System.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="737" column="25" selection-start="30460" selection-end="30460" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Loader.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/Loader.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="11" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClassPool.class" pinned="false" current="true" current-in-tab="true">
+        <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/ClassPool.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="128" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.33236995">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VerboseTranslator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/time/fake/VerboseTranslator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="13" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VerboseLoader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/time/fake/VerboseLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="39" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CtClass.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/CtClass.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="225" column="0" selection-start="10797" selection-end="10797" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClassLoader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/ClassLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="464" column="18" selection-start="17691" selection-end="17691" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="URLClassLoader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/net/URLClassLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="224" column="22" selection-start="8400" selection-end="8400" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -179,21 +200,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/TransformAClass.java" />
-        <option value="$PROJECT_DIR$/src/ClassTransformer.java" />
-        <option value="$PROJECT_DIR$/src/org/time/AddMethodAdapter.java" />
         <option value="$PROJECT_DIR$/src/org/time/JavassistRun.java" />
         <option value="$PROJECT_DIR$/src/org/time/Abc.java" />
-        <option value="$PROJECT_DIR$/src/org/time/ClassTransformer.java" />
         <option value="$PROJECT_DIR$/src/org/time/MyClassLoader.java" />
         <option value="$PROJECT_DIR$/src/java/lang/TimeChangingTransformer.java" />
-        <option value="$PROJECT_DIR$/test/ClassTransformerTest.java" />
         <option value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-        <option value="$PROJECT_DIR$/src/org/time/TransformerRegistrar.java" />
         <option value="$PROJECT_DIR$/src/org/time/SomeAdapter.java" />
         <option value="$PROJECT_DIR$/src/org/time/NativeMethodAdapter.java" />
-        <option value="$PROJECT_DIR$/src/org/time/TimeChangingTransformer.java" />
         <option value="$PROJECT_DIR$/src/org/time/MyClassAdapter.java" />
+        <option value="$PROJECT_DIR$/src/org/time/ClassTransformer.java" />
+        <option value="$PROJECT_DIR$/src/org/time/TimeChangingTransformer.java" />
+        <option value="$PROJECT_DIR$/test/ClassTransformerTest.java" />
+        <option value="$PROJECT_DIR$/src/org/time/TransformerRegistrar.java" />
+        <option value="$PROJECT_DIR$/src/org/time/Run.java" />
+        <option value="$PROJECT_DIR$/src/org/time/fake/VerboseTranslator.java" />
+        <option value="$PROJECT_DIR$/src/org/time/fake/Run.java" />
+        <option value="$PROJECT_DIR$/src/org/time/fake/VerboseLoader.java" />
       </list>
     </option>
   </component>
@@ -403,6 +425,36 @@
               <option name="myItemId" value="sun" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="faketime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.6 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -446,11 +498,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="faketime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="faketime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="time" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="faketime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="faketime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="time" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fake" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -509,6 +597,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.time.fake" />
       <recent name="org.time" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -516,7 +605,45 @@
       <recent name="java.lang" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClassTransformerTest.shouldBoo">
+  <component name="RunManager" selected="Application.Run">
+    <configuration default="false" name="TransformerRegistrar" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="org.time.TransformerRegistrar" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="faketime" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Run" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="org.time.fake.Run" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="org.time.fake.Run" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="faketime" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="false" name="ClassTransformerTest.shouldBoo" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="faketime" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -535,7 +662,13 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -559,24 +692,6 @@
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -605,6 +720,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -656,8 +789,10 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ClassTransformerTest.shouldBoo" />
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Application.TransformerRegistrar" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Run" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ClassTransformerTest.shouldBoo" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -685,6 +820,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="c03e8d54-1519-482b-b46d-0ac03c24f739" name="Default" comment="" />
       <created>1329217849274</created>
       <updated>1329217849274</updated>
     </task>
@@ -696,24 +832,24 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3992298" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.67008984" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.67008984" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -772,123 +908,88 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/../Classes/classes.jar!/com/sun/tools/javac/util/Options.class">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/../Classes/classes.jar!/com/sun/tools/jdi/VirtualMachineImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="207" selection-end="207" vertical-scroll-proportion="0.10273973">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/instrument/Instrumentation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="17" selection-start="1644" selection-end="1644" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/time/ClassTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/time/Abc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/../Classes/classes.jar!/com/sun/xml/internal/ws/org/objectweb/asm/ClassVisitor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/time/AddMethodAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="501" selection-end="1620" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/../Classes/classes.jar!/com/sun/xml/internal/ws/org/objectweb/asm/MethodWriter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="6" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/../Classes/classes.jar!/com/sun/xml/internal/ws/org/objectweb/asm/ClassWriter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/asm-4.0.jar!/org/objectweb/asm/ClassVisitor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="22" selection-start="164" selection-end="164" vertical-scroll-proportion="0.32">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/asm-4.0.jar!/org/objectweb/asm/ClassWriter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="155" selection-end="155" vertical-scroll-proportion="0.32">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/asm-4.0.jar!/org/objectweb/asm/Opcodes.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="8" selection-start="178" selection-end="178" vertical-scroll-proportion="0.32">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/time/TransformerRegistrar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="62" selection-start="503" selection-end="522" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#657#664#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/time/TimeChangingTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="32" selection-start="2539" selection-end="2539" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/time/MyClassAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="18" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="72" column="16" selection-start="3348" selection-end="3348" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/../Classes/classes.jar!/com/sun/jdi/VirtualMachine.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="12" selection-start="1994" selection-end="1994" vertical-scroll-proportion="0.0">
+        <state line="18" column="9" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/CodeConverter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="16" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.32" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/time/ClassTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="2" selection-start="2876" selection-end="2876" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/time/TimeChangingTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="60" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ClassTransformerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="38" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/time/TransformerRegistrar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="25" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/time/fake/Run.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="25" selection-start="1934" selection-end="1934" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="737" column="25" selection-start="30460" selection-end="30460" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/Loader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="11" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/lib/sa-jdi.jar!/sun/jvm/hotspot/jdi/VirtualMachineImpl.class">
+    <entry file="file://$PROJECT_DIR$/src/org/time/fake/VerboseTranslator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="36" selection-start="7817" selection-end="7817" vertical-scroll-proportion="0.33333334">
+        <state line="14" column="13" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/time/fake/VerboseLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="39" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/CtClass.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="225" column="0" selection-start="10797" selection-end="10797" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="464" column="18" selection-start="17691" selection-end="17691" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/net/URLClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="224" column="22" selection-start="8400" selection-end="8400" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/ClassPool.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="128" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.33236995">
           <folding />
         </state>
       </provider>

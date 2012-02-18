@@ -1,0 +1,1 @@
+gcc -shared -I $JAVA_HOME/include -g -Wall SampleJVMTIAgent.c -o libagent.jnilib && java -agentlib:agent -agentpath:`pwd`/libagent.jnilib SimpleThread
