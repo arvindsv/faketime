@@ -25,6 +25,12 @@ public class Run {
     }
 
     public static void main(String[] args) throws Throwable {
+        Method[] methods = System.class.getMethods();
+        for (Method method : methods) {
+            System.out.println(method.getName());
+        }
+        if (true) return;
+
         if (args.length < 1) {
             System.err.println("Ouch! Usage: Run main-class args...");
             System.setProperty(null, null);
@@ -33,7 +39,6 @@ public class Run {
 
         runMainInClassOfArgument(setupClassLoader(), args);
 
-        if (true) return;
         VerboseTranslator translator = new VerboseTranslator();
         ClassPool pool = ClassPool.getDefault();
         Loader loader = new Loader(pool);

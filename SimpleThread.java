@@ -1,19 +1,22 @@
+import java.lang.reflect.Method;
+
 public class SimpleThread {
   native static void check(Thread thr, ClassLoader cl);
   static MyThread t;
 
   public static void main(String args[]) throws Throwable{
-    // System.loadLibrary("a");
-
     System.out.println("Time: " + System.currentTimeMillis());
+
+    Method[] methods = System.class.getMethods();
+    for (Method method : methods) {
+      System.out.println(method.getName());
+    }
 
     t = new MyThread();
     System.out.println("Creating and running 5 threads...");
     for(int i = 0; i < 5; i++) {
       Thread thr = new Thread(t,"MyThread"+i);
       thr.start();
-
-      //         	check(thr, thr.getContextClassLoader());
       try {
         thr.join();
       } catch (Throwable t) {
@@ -43,7 +46,6 @@ class MyThread implements Runnable {
   }
 
   public void excep() throws Throwable{
-
     throw new Exception("Thread Exception from MyThread");
   }
 }        

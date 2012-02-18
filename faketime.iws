@@ -7,22 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c03e8d54-1519-482b-b46d-0ac03c24f739" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyThread.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimpleThread.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libagent.jnilib.dSYM/Contents/Info.plist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libagent.jnilib.dSYM/Contents/Resources/DWARF/libagent.jnilib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libagent.jnilib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/run" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SampleJVMTIAgent.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimpleThread.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/time/fake/Run.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/time/fake/VerboseLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/time/fake/VerboseTranslator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyThread.class" afterPath="$PROJECT_DIR$/MyThread.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleThread.class" afterPath="$PROJECT_DIR$/SimpleThread.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libagent.jnilib.dSYM/Contents/Resources/DWARF/libagent.jnilib" afterPath="$PROJECT_DIR$/libagent.jnilib.dSYM/Contents/Resources/DWARF/libagent.jnilib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libagent.jnilib" afterPath="$PROJECT_DIR$/libagent.jnilib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SampleJVMTIAgent.c" afterPath="$PROJECT_DIR$/SampleJVMTIAgent.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimpleThread.java" afterPath="$PROJECT_DIR$/SimpleThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/faketime.iws" afterPath="$PROJECT_DIR$/faketime.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/time/ClassTransformer.java" afterPath="$PROJECT_DIR$/src/org/time/ClassTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/time/TimeChangingTransformer.java" afterPath="$PROJECT_DIR$/src/org/time/TimeChangingTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/time/TransformerRegistrar.java" afterPath="$PROJECT_DIR$/src/org/time/TransformerRegistrar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/ClassTransformerTest.java" afterPath="$PROJECT_DIR$/test/ClassTransformerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/time/fake/Run.java" afterPath="$PROJECT_DIR$/src/org/time/fake/Run.java" />
     </list>
     <ignored path="faketime.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,19 +87,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TransformerRegistrar.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/time/TransformerRegistrar.java">
+      <file leaf-file-name="Run.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/time/fake/Run.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="25" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="25" column="0" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Run.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/time/fake/Run.java">
+      <file leaf-file-name="Long.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/Long.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="25" selection-start="1934" selection-end="1934" vertical-scroll-proportion="0.0">
+            <state line="33" column="19" selection-start="1106" selection-end="1110" vertical-scroll-proportion="0.33333334">
               <folding />
             </state>
           </provider>
@@ -131,10 +125,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassPool.class" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ClassPool.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/ClassPool.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="128" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.33236995">
+            <state line="51" column="128" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.32">
               <folding />
             </state>
           </provider>
@@ -214,8 +208,8 @@
         <option value="$PROJECT_DIR$/src/org/time/TransformerRegistrar.java" />
         <option value="$PROJECT_DIR$/src/org/time/Run.java" />
         <option value="$PROJECT_DIR$/src/org/time/fake/VerboseTranslator.java" />
-        <option value="$PROJECT_DIR$/src/org/time/fake/Run.java" />
         <option value="$PROJECT_DIR$/src/org/time/fake/VerboseLoader.java" />
+        <option value="$PROJECT_DIR$/src/org/time/fake/Run.java" />
       </list>
     </option>
   </component>
@@ -838,16 +832,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.67008984" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32862645" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
@@ -908,11 +902,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/../Classes/classes.jar!/com/sun/tools/jdi/VirtualMachineImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="16" selection-start="3348" selection-end="3348" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/../Classes/classes.jar!/com/sun/jdi/VirtualMachine.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="9" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" />
@@ -941,11 +930,6 @@
     <entry file="file://$PROJECT_DIR$/src/org/time/TransformerRegistrar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="25" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/time/fake/Run.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="25" selection-start="1934" selection-end="1934" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/System.java">
@@ -989,7 +973,23 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/ClassPool.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="128" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.33236995">
+        <state line="51" column="128" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.32">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/time/fake/Run.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/Long.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="19" selection-start="1106" selection-end="1110" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
