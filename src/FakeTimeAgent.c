@@ -118,8 +118,6 @@ JNIEXPORT jint JNICALL Agent_OnLoad(JavaVM *jvm, char *options, void *reserved)
   (void)memset(&capa, 0, sizeof(jvmtiCapabilities));
   capa.can_get_owned_monitor_info = 1;
   capa.can_generate_native_method_bind_events = 1;
-  capa.can_generate_all_class_hook_events = 1;
-  capa.can_tag_objects = 1;	
   check_jvmti_error(jvmti, (*jvmti)->AddCapabilities(jvmti, &capa), "Unable to get necessary JVMTI capabilities.");
 
   (void)memset(&callbacks, 0, sizeof(callbacks));
