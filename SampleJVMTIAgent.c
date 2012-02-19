@@ -18,20 +18,18 @@ static GlobalAgentData *gdata;
 
 typedef jlong (JNICALL *call__jlong) (JNIEnv*, jclass);
 call__jlong originalMethodCurrentTimeInMillis = NULL;
-int vmHasNotStarted = 0;
 
 JNIEXPORT jlong JNICALL newCurrentTimeInMillis(JNIEnv* env, jclass jc) {
   jclass systemClass = (*env)->FindClass(env, "java/lang/System");
   jmethodID getPropertyMethodId = (*env)->GetStaticMethodID(env, systemClass, "getProperty", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;");
 
-  if (vmHasNotStarted == 0) {
+  if (!gdata->vm_is_started) {
     return originalMethodCurrentTimeInMillis(env, jc);
   }
 
   jstring offsetPropertyName = (*env)->NewStringUTF(env, "faketime.offset");
   jstring offsetPropertyDefault = (*env)->NewStringUTF(env, "800000000000");
 
-  printf("Class: %p, Property: %p %p %p\n", systemClass, getPropertyMethodId, offsetPropertyName, offsetPropertyDefault);
   jstring offsetValue = (*env)->CallStaticObjectMethod(env, systemClass, getPropertyMethodId, offsetPropertyName, offsetPropertyDefault);
   if ((*env)->ExceptionCheck(env)) return 0;
 
@@ -39,8 +37,6 @@ JNIEXPORT jlong JNICALL newCurrentTimeInMillis(JNIEnv* env, jclass jc) {
 
   jlong realTime = originalMethodCurrentTimeInMillis(env, jc);
   jlong timeWithOffset = realTime + atol(offset);
-
-  printf("Offset: %ld %s = %ld %ld\n", atol(offset), offset, timeWithOffset, realTime);
 
   (*env)->ReleaseStringUTFChars(env, offsetValue, offset);
   return timeWithOffset;
@@ -88,7 +84,6 @@ void JNICALL callbackNativeMethodBind(jvmtiEnv *jvmti_env, JNIEnv* jni_env, jthr
       err = (*jvmti)->GetMethodDeclaringClass(jvmti, method, &declaring_class);
       err = (*jvmti)->GetClassSignature(jvmti, declaring_class, &declaringClassName, NULL);
       if (err == JVMTI_ERROR_NONE && strcmp("Ljava/lang/System;", declaringClassName) == 0) {
-        printf("at method %s in class %s (new: %p, old: %p).\n", methodName, declaringClassName, *new_address_ptr, address);
         if (originalMethodCurrentTimeInMillis == NULL) {
           originalMethodCurrentTimeInMillis = address;
           *new_address_ptr = (void *) &newCurrentTimeInMillis;
@@ -104,8 +99,6 @@ void JNICALL callbackNativeMethodBind(jvmtiEnv *jvmti_env, JNIEnv* jni_env, jthr
 
 void JNICALL callbackVMInit(jvmtiEnv *jvmti_env, JNIEnv* jni_env, jthread thread) {
   gdata->vm_is_started = JNI_TRUE;
-  vmHasNotStarted = 1;
-  printf("Init!\n");
 }
 
 JNIEXPORT jint JNICALL Agent_OnLoad(JavaVM *jvm, char *options, void *reserved)
