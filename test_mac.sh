@@ -1,2 +1,8 @@
-javac FakeTimeTest.java && gcc -shared -I $JAVA_HOME/include -Wall src/FakeTimeAgent.c -o libfaketime.jnilib && \
-   mv libfaketime.jnilib lib/mac && java -agentpath:./lib/mac/libfaketime.jnilib FakeTimeTest
+#!/bin/sh
+set -e
+
+gcc -shared -I $JAVA_HOME/include -Wall src/FakeTimeAgent.c -o libfaketime.jnilib 
+mkdir -p lib/mac/ && mv libfaketime.jnilib lib/mac/
+
+javac FakeTimeTest.java 
+java -agentpath:./lib/mac/libfaketime.jnilib FakeTimeTest
