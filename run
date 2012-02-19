@@ -1,1 +1,2 @@
-gcc -shared -I $JAVA_HOME/include -g -Wall SampleJVMTIAgent.c -o libagent.jnilib && java -agentlib:agent -agentpath:`pwd`/libagent.jnilib SimpleThread
+javac FakeTimeTest.java
+gcc -shared -I $JAVA_HOME/include -Wall SampleJVMTIAgent.c -o libagent.jnilib && java -agentlib:agent -agentpath:`pwd`/libagent.jnilib FakeTimeTest

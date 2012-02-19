@@ -12,12 +12,11 @@ typedef struct {
   jrawMonitorID  lock;
 } GlobalAgentData;
 
-static jvmtiEnv *jvmti = NULL;
-static jvmtiCapabilities capa;
-static GlobalAgentData *gdata;
-
 typedef jlong (JNICALL *call__jlong) (JNIEnv*, jclass);
-call__jlong originalMethodCurrentTimeInMillis = NULL;
+
+static jvmtiEnv *jvmti = NULL;
+static GlobalAgentData *gdata;
+static call__jlong originalMethodCurrentTimeInMillis = NULL;
 
 JNIEXPORT jlong JNICALL newCurrentTimeInMillis(JNIEnv* env, jclass jc) {
   jclass systemClass = (*env)->FindClass(env, "java/lang/System");
@@ -28,7 +27,7 @@ JNIEXPORT jlong JNICALL newCurrentTimeInMillis(JNIEnv* env, jclass jc) {
   }
 
   jstring offsetPropertyName = (*env)->NewStringUTF(env, "faketime.offset");
-  jstring offsetPropertyDefault = (*env)->NewStringUTF(env, "800000000000");
+  jstring offsetPropertyDefault = (*env)->NewStringUTF(env, "0");
 
   jstring offsetValue = (*env)->CallStaticObjectMethod(env, systemClass, getPropertyMethodId, offsetPropertyName, offsetPropertyDefault);
   if ((*env)->ExceptionCheck(env)) return 0;
@@ -108,13 +107,14 @@ JNIEXPORT jint JNICALL Agent_OnLoad(JavaVM *jvm, char *options, void *reserved)
 
   jint res = (*jvm)->GetEnv(jvm, (void **) &jvmti, JVMTI_VERSION_1_0);
   if (res != JNI_OK || jvmti == NULL) {
-    printf("ERROR: Unable to access JVMTI Version 1");
+    fprintf(stderr, "ERROR: Unable to access JVMTI Version 1");
   }
 
   (void)memset((void*)&data, 0, sizeof(data));
   gdata = &data;
   gdata->jvmti = jvmti;
 
+  jvmtiCapabilities capa;
   (void)memset(&capa, 0, sizeof(jvmtiCapabilities));
   capa.can_get_owned_monitor_info = 1;
   capa.can_generate_native_method_bind_events = 1;
