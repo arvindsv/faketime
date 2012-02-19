@@ -12,9 +12,9 @@ This native Java Agent allows you to change the time in a Java program, without 
 
         java -agentpath:/path/to/libfaketime.jnilib org.test.Main
 
-* In your program, you can set the property **faketime.offset** to the number of milliseconds you want the time altered by. For example, to add a day, you can do something like this:
+* In your program, you can set the property **faketime.offset.seconds** to the number of *seconds* you want the time altered by. For example, to add a day, you can do something like this:
 
-        System.setProperty("faketime.offset", String.valueOf(86400 * 1000));
+        System.setProperty("faketime.offset.seconds", String.valueOf(86400));
 
 ### The "hard" way - For the Mac
 
@@ -28,10 +28,10 @@ This native Java Agent allows you to change the time in a Java program, without 
 
         java -agentpath:/path/to/libfaketime.jnilib org.test.Main
 
-  or, if the current directory has libfaketime.jnilib, you can use: 
+    or, if the current directory has libfaketime.jnilib, you can use: 
 
         java -agentlib:faketime org.test.Main
 
-* In your program, you can set the property **faketime.offset** to the number of milliseconds you want the time altered by. For example, to add a day, you can do something like this:
+* In your program, you can set the property **faketime.offset.seconds** to the number of *seconds* you want the time altered by. For example, to add a day, you can do something like this:
 
-        System.setProperty("faketime.offset", String.valueOf(86400 * 1000));
+        System.setProperty("faketime.offset.seconds", String.valueOf(86400 * 1000));
