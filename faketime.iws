@@ -90,27 +90,25 @@
       <file leaf-file-name="Run.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/time/fake/Run.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Long.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/Long.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="19" selection-start="1106" selection-end="1110" vertical-scroll-proportion="0.33333334">
+            <state line="2" column="21" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="System.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/System.java">
+      <file leaf-file-name="Javac.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/compiler/Javac.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="737" column="25" selection-start="30460" selection-end="30460" vertical-scroll-proportion="0.0">
+            <state line="70" column="0" selection-start="4283" selection-end="4283" vertical-scroll-proportion="0.32">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Long.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/Long.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="19" selection-start="1106" selection-end="1110" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,7 +117,25 @@
       <file leaf-file-name="Loader.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/Loader.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="11" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
+            <state line="15" column="11" selection-start="517" selection-end="517" vertical-scroll-proportion="0.32">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="System.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/System.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1085" column="5" selection-start="44500" selection-end="44500" vertical-scroll-proportion="0.3324468">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Properties.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/util/Properties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="951" column="18" selection-start="37371" selection-end="37371" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -134,28 +150,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VerboseTranslator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/time/fake/VerboseTranslator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VerboseLoader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/time/fake/VerboseLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="39" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CtClass.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/CtClass.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="225" column="0" selection-start="10797" selection-end="10797" vertical-scroll-proportion="0.0">
+            <state line="5" column="22" selection-start="156" selection-end="156" vertical-scroll-proportion="0.32">
               <folding />
             </state>
           </provider>
@@ -244,6 +242,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -317,82 +317,6 @@
               <option name="myItemId" value="sun" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="internal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="faketime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.6 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="internal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="faketime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.6 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="internal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="asm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -447,6 +371,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="internal" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -568,10 +496,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="faketime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="faketime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javassist.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="faketime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="faketime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javassist.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javassist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="faketime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="faketime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -837,8 +817,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.67008984" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32862645" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.67137355" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -902,16 +882,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/../Classes/classes.jar!/com/sun/jdi/VirtualMachine.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="9" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/CodeConverter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="16" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.32" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/time/ClassTransformer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="75" column="2" selection-start="2876" selection-end="2876" vertical-scroll-proportion="0.0" />
@@ -932,18 +902,6 @@
         <state line="37" column="25" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="737" column="25" selection-start="30460" selection-end="30460" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/Loader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="11" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/time/fake/VerboseTranslator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="13" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0" />
@@ -952,13 +910,6 @@
     <entry file="file://$PROJECT_DIR$/src/org/time/fake/VerboseLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="39" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/CtClass.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="225" column="0" selection-start="10797" selection-end="10797" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/ClassLoader.java">
@@ -978,18 +929,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/time/fake/Run.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/Long.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="33" column="19" selection-start="1106" selection-end="1110" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/Long.java">
+    <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/compiler/Javac.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="19" selection-start="1106" selection-end="1110" vertical-scroll-proportion="0.33333334">
+        <state line="70" column="0" selection-start="4283" selection-end="4283" vertical-scroll-proportion="0.32">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/time/fake/Run.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="21" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/CtClass.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="22" selection-start="156" selection-end="156" vertical-scroll-proportion="0.32">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/javassist.jar!/javassist/Loader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="11" selection-start="517" selection-end="517" vertical-scroll-proportion="0.32">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/util/Properties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="951" column="18" selection-start="37371" selection-end="37371" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home/src.jar!/src/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1085" column="5" selection-start="44500" selection-end="44500" vertical-scroll-proportion="0.3324468">
           <folding />
         </state>
       </provider>

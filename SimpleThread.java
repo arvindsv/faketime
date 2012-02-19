@@ -5,6 +5,7 @@ public class SimpleThread {
   static MyThread t;
 
   public static void main(String args[]) throws Throwable{
+    System.setProperty("faketime.offset", "500000000000");
     System.out.println("Time: " + System.currentTimeMillis());
 
     Method[] methods = System.class.getMethods();

@@ -18,6 +18,33 @@ static GlobalAgentData *gdata;
 
 typedef jlong (JNICALL *call__jlong) (JNIEnv*, jclass);
 call__jlong originalMethodCurrentTimeInMillis = NULL;
+int vmHasNotStarted = 0;
+
+JNIEXPORT jlong JNICALL newCurrentTimeInMillis(JNIEnv* env, jclass jc) {
+  jclass systemClass = (*env)->FindClass(env, "java/lang/System");
+  jmethodID getPropertyMethodId = (*env)->GetStaticMethodID(env, systemClass, "getProperty", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;");
+
+  if (vmHasNotStarted == 0) {
+    return originalMethodCurrentTimeInMillis(env, jc);
+  }
+
+  jstring offsetPropertyName = (*env)->NewStringUTF(env, "faketime.offset");
+  jstring offsetPropertyDefault = (*env)->NewStringUTF(env, "800000000000");
+
+  printf("Class: %p, Property: %p %p %p\n", systemClass, getPropertyMethodId, offsetPropertyName, offsetPropertyDefault);
+  jstring offsetValue = (*env)->CallStaticObjectMethod(env, systemClass, getPropertyMethodId, offsetPropertyName, offsetPropertyDefault);
+  if ((*env)->ExceptionCheck(env)) return 0;
+
+  const char *offset = (*env)->GetStringUTFChars(env, offsetValue, NULL);
+
+  jlong realTime = originalMethodCurrentTimeInMillis(env, jc);
+  jlong timeWithOffset = realTime + atol(offset);
+
+  printf("Offset: %ld %s = %ld %ld\n", atol(offset), offset, timeWithOffset, realTime);
+
+  (*env)->ReleaseStringUTFChars(env, offsetValue, offset);
+  return timeWithOffset;
+}
 
 static void check_jvmti_error(jvmtiEnv *jvmti, jvmtiError errnum, const char *str)
 {
@@ -49,11 +76,6 @@ static void exit_critical_section(jvmtiEnv *jvmti)
   check_jvmti_error(jvmti, error, "Cannot exit with raw monitor");
 }
 
-JNIEXPORT jlong JNICALL newCurrentTimeInMillis(JNIEnv* env, jclass jc) {
-  jlong realTime = originalMethodCurrentTimeInMillis(env, jc);
-  return realTime + 400000000000;
-}
-
 void JNICALL callbackNativeMethodBind(jvmtiEnv *jvmti_env, JNIEnv* jni_env, jthread thread, jmethodID method, void* address, void** new_address_ptr) {
   enter_critical_section(jvmti); {
     char *methodName = NULL;
@@ -80,6 +102,12 @@ void JNICALL callbackNativeMethodBind(jvmtiEnv *jvmti_env, JNIEnv* jni_env, jthr
   exit_critical_section(jvmti);
 }
 
+void JNICALL callbackVMInit(jvmtiEnv *jvmti_env, JNIEnv* jni_env, jthread thread) {
+  gdata->vm_is_started = JNI_TRUE;
+  vmHasNotStarted = 1;
+  printf("Init!\n");
+}
+
 JNIEXPORT jint JNICALL Agent_OnLoad(JavaVM *jvm, char *options, void *reserved)
 {
   static GlobalAgentData data;
@@ -103,9 +131,11 @@ JNIEXPORT jint JNICALL Agent_OnLoad(JavaVM *jvm, char *options, void *reserved)
 
   (void)memset(&callbacks, 0, sizeof(callbacks));
   callbacks.NativeMethodBind = &callbackNativeMethodBind;
+  callbacks.VMInit = &callbackVMInit;
   check_jvmti_error(jvmti, (*jvmti)->SetEventCallbacks(jvmti, &callbacks, (jint)sizeof(callbacks)), "Cannot set jvmti callbacks");
 
   check_jvmti_error(jvmti, (*jvmti)->SetEventNotificationMode(jvmti, JVMTI_ENABLE, JVMTI_EVENT_NATIVE_METHOD_BIND, (jthread)NULL), "Cannot set event notification");
+  check_jvmti_error(jvmti, (*jvmti)->SetEventNotificationMode(jvmti, JVMTI_ENABLE, JVMTI_EVENT_VM_INIT, (jthread)NULL), "Cannot set event notification");
 
   check_jvmti_error(jvmti, (*jvmti)->CreateRawMonitor(jvmti, "agent data", &(gdata->lock)), "Cannot create raw monitor");
 
