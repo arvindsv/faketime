@@ -14,7 +14,7 @@ This native Java Agent allows you to change the time in a Java program, without 
 
 * In your Java code, you can set the property **faketime.offset.seconds** to the number of *seconds* you want the time altered by. For example, to add a day, you can do something like this:
 
-        System.setProperty("faketime.offset.seconds", String.valueOf(86400));
+        System.setProperty("faketime.offset.seconds", "86400");
         
 * That's it! Take a look at [FakeTimeTest.java](https://github.com/arvindsv/faketime/blob/master/FakeTimeTest.java) if you need to see some Java code which uses it.
 
@@ -36,6 +36,6 @@ This native Java Agent allows you to change the time in a Java program, without 
 
 * In your Java code, you can set the property **faketime.offset.seconds** to the number of *seconds* you want the time altered by. For example, to add a day, you can do something like this:
 
-        System.setProperty("faketime.offset.seconds", String.valueOf(86400 * 1000));
+        System.setProperty("faketime.offset.seconds", "86400");
 
 * That's it! Take a look at [FakeTimeTest.java](https://github.com/arvindsv/faketime/blob/master/FakeTimeTest.java) if you need to see some Java code which uses it.
