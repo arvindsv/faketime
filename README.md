@@ -10,8 +10,11 @@ This native Java Agent allows you to change the time in a Java program, without 
 
 * Run your Java program (say, org.test.Main) with the agent-specific extra arguments (see [issue #3](https://github.com/arvindsv/faketime/issues/3)), like this:
 
-        java -agentpath:/path/to/libfaketime.jnilib -XX:+UnlockDiagnosticVMOptions -XX:DisableIntrinsic=_currentTimeMillis \
-          -XX:CompileCommand=exclude,java/lang/System.currentTimeMillis org.test.Main
+        java -agentpath:/path/to/libfaketime.jnilib \
+          -XX:+UnlockDiagnosticVMOptions \
+          -XX:DisableIntrinsic=_currentTimeMillis \
+          -XX:CompileCommand=exclude,java/lang/System.currentTimeMillis \
+          org.test.Main
 
 * In your Java code, you can set the property **faketime.offset.seconds** to the number of *seconds* you want the time altered by. For example, to add a day, you can do something like this:
 
@@ -29,12 +32,17 @@ This native Java Agent allows you to change the time in a Java program, without 
 
 * This will create libfaketime.jnilib in the current directory. Run your Java program (say, org.test.Main) with the agent-specific extra arguments, like this:
 
-        java -agentpath:/path/to/libfaketime.jnilib -XX:+UnlockDiagnosticVMOptions -XX:DisableIntrinsic=_currentTimeMillis \
-          -XX:CompileCommand=exclude,java/lang/System.currentTimeMillis org.test.Main
+        java -agentpath:/path/to/libfaketime.jnilib \
+          -XX:+UnlockDiagnosticVMOptions \
+          -XX:DisableIntrinsic=_currentTimeMillis \
+          -XX:CompileCommand=exclude,java/lang/System.currentTimeMillis \
+          org.test.Main
 
     or, if the current directory has libfaketime.jnilib, you can use: 
 
-        java -agentlib:faketime -XX:+UnlockDiagnosticVMOptions -XX:DisableIntrinsic=_currentTimeMillis \
+        java -agentlib:faketime \
+          -XX:+UnlockDiagnosticVMOptions \
+          -XX:DisableIntrinsic=_currentTimeMillis \
           -XX:CompileCommand=exclude,java/lang/System.currentTimeMillis org.test.Main
 
 * In your Java code, you can set the property **faketime.offset.seconds** to the number of *seconds* you want the time altered by. For example, to add a day, you can do something like this:
