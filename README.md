@@ -20,6 +20,10 @@ This native Java Agent allows you to change the time in a Java program, without 
 
         System.setProperty("faketime.offset.seconds", "86400");
         
+* You can also set property **faketime.fixed.seconds** to fix the time at a certain moment. For example, to set the date to 1 of January 1970, you can do something like this:
+
+        System.setProperty("faketime.fixed.seconds", "0");
+        
 * That's it! Take a look at [FakeTimeTest.java](https://github.com/arvindsv/faketime/blob/master/FakeTimeTest.java) if you need to see some Java code which uses it.
 
 ### The "hard" way - For the Mac
@@ -28,7 +32,7 @@ This native Java Agent allows you to change the time in a Java program, without 
 
 * Run this:
 
-        gcc -shared -I $JAVA_HOME/include -Wall src/FakeTimeAgent.c -o libfaketime.jnilib
+        gcc -shared -I $JAVA_HOME/include -I $JAVA_HOME/include/darwin -Wall src/FakeTimeAgent.c -o libfaketime.jnilib
 
 * This will create libfaketime.jnilib in the current directory. Run your Java program (say, org.test.Main) with the agent-specific extra arguments, like this:
 
@@ -48,5 +52,9 @@ This native Java Agent allows you to change the time in a Java program, without 
 * In your Java code, you can set the property **faketime.offset.seconds** to the number of *seconds* you want the time altered by. For example, to add a day, you can do something like this:
 
         System.setProperty("faketime.offset.seconds", "86400");
+
+* You can also set property **faketime.fixed.seconds** to fix the time at a certain moment. For example, to set the date to 1 of January 1970, you can do something like this:
+
+        System.setProperty("faketime.fixed.seconds", "0");
 
 * That's it! Take a look at [FakeTimeTest.java](https://github.com/arvindsv/faketime/blob/master/FakeTimeTest.java) if you need to see some Java code which uses it.

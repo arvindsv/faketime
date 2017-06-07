@@ -20,16 +20,26 @@ static call__jlong originalMethodCurrentTimeInMillis = NULL;
 
 JNIEXPORT jlong JNICALL newCurrentTimeInMillis(JNIEnv* env, jclass jc) {
   jclass systemClass = (*env)->FindClass(env, "java/lang/System");
-  jmethodID getPropertyMethodId = (*env)->GetStaticMethodID(env, systemClass, "getProperty", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;");
+  jmethodID getPropertyMethodId = (*env)->GetStaticMethodID(env, systemClass, "getProperty", "(Ljava/lang/String;)Ljava/lang/String;");
+  jmethodID getDefaultingPropertyMethodId = (*env)->GetStaticMethodID(env, systemClass, "getProperty", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;");
 
   if (!gdata->vm_is_started) {
     return originalMethodCurrentTimeInMillis(env, jc);
   }
 
+  jstring fixedPropertyName = (*env)->NewStringUTF(env, "faketime.fixed.seconds");
+
+  jstring fixedValue = (*env)->CallStaticObjectMethod(env, systemClass, getPropertyMethodId, fixedPropertyName);
+  if ((*env)->ExceptionCheck(env)) return 0;
+
+  if (fixedValue != NULL) {
+    return atol((*env)->GetStringUTFChars(env, fixedValue, NULL)) * 1000;
+  }
+
   jstring offsetPropertyName = (*env)->NewStringUTF(env, "faketime.offset.seconds");
   jstring offsetPropertyDefault = (*env)->NewStringUTF(env, "0");
 
-  jstring offsetValue = (*env)->CallStaticObjectMethod(env, systemClass, getPropertyMethodId, offsetPropertyName, offsetPropertyDefault);
+  jstring offsetValue = (*env)->CallStaticObjectMethod(env, systemClass, getDefaultingPropertyMethodId, offsetPropertyName, offsetPropertyDefault);
   if ((*env)->ExceptionCheck(env)) return 0;
 
   const char *offset = (*env)->GetStringUTFChars(env, offsetValue, NULL);
