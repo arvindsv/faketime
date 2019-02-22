@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+set -eu
 
 gcc -fPIC -shared -I $JAVA_HOME/include -I $JAVA_HOME/include/linux -m64 -Wall src/FakeTimeAgent.c -o libfaketime.so 
 mkdir -p lib/linux && mv libfaketime.so lib/linux/ 

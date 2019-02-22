@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+set -eu
 
 gcc -shared -I $JAVA_HOME/include -Wall src/FakeTimeAgent.c -o libfaketime.jnilib 
 mkdir -p lib/mac/ && mv libfaketime.jnilib lib/mac/
