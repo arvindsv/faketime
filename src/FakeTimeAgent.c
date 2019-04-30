@@ -56,7 +56,7 @@ JNIEXPORT jlong JNICALL newCurrentTimeInMillis(JNIEnv* env, jclass jc) {
 
   jstring offsetPropertyName = (*env)->NewStringUTF(env, "faketime.offset.seconds");
   jstring offsetPropertyDefault = (*env)->NewStringUTF(env, "0");
-  jstring filePathPropertyName = (*env)->NewStringUTF(env, "faketime.file.path");
+  jstring filePathPropertyName = (*env)->NewStringUTF(env, "faketime.offset.file");
   //jstring fileCacheDurationPropertyName = (*env)->NewStringUTF(env, "faketime.file.cache_duration");
   //jstring fileCacheDurationPropertyDefault = (*env)->NewStringUTF(env, "10");
 
