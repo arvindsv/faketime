@@ -8,7 +8,7 @@ public class FakeTimeFileTest {
     final Path filePath = Files.createTempFile(null, null);
     System.out.println("Using temporary file " + filePath.toString());
     
-    System.setProperty("faketime.file.path", filePath.toAbsolutePath().toString());
+    System.setProperty("faketime.offset.file", filePath.toAbsolutePath().toString());
 
     for(int i = 0; i < 10; i++) {
       Files.write(filePath, String.valueOf(i * -86400).getBytes("UTF-8"));

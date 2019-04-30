@@ -70,11 +70,11 @@ OR
 
 ##### Option 2: Control offset with an offset file
 
-You can set the property **faketime.file.path** to point to a file containing the offset in *seconds* (ASCII-encoded). This way you can alter the time using methods external to the Java process, i.e. through a mounted Kubernetes ConfigMap.
+You can set the property **faketime.offset.file** to point to a file containing the offset in *seconds* (ASCII-encoded). This way you can alter the time using methods external to the Java process, i.e. through a mounted Kubernetes ConfigMap.
 
 ```
 java -agentpath:/path/to/the/library/you/got/above \
-  -Dfaketime.file.path=/path/to/a/text/file/containing/a/number
+  -Dfaketime.offset.file=/path/to/a/text/file/containing/a/number
   -XX:+UnlockDiagnosticVMOptions \
   -XX:DisableIntrinsic=_currentTimeMillis \
   -XX:CompileCommand=exclude,java/lang/System.currentTimeMillis \
