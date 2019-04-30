@@ -18,6 +18,34 @@ static jvmtiEnv *jvmti = NULL;
 static GlobalAgentData *gdata;
 static call__jlong originalMethodCurrentTimeInMillis = NULL;
 
+// Read the offset in seconds from a text file and convert it to a long in milliseconds.
+long readOffsetFromFile(const char* filePath) {
+  FILE* pFile = fopen(filePath, "r");
+
+  if (pFile == NULL) {
+    return 0L;
+  }
+
+  // Find the size of the file
+  fseek(pFile, 0, SEEK_END);
+  long lSize = ftell(pFile);
+  rewind(pFile);
+
+  // Allocate a buffer for the file contents, adding room for NULL-termination.
+  char* buffer = (char*) malloc(sizeof(char) * (lSize + 1));
+  fread(buffer, sizeof(char), lSize, pFile);
+  fclose(pFile);
+
+  buffer[lSize] = '\0'; // Make sure the string is null terminated
+
+  // Convert the offset string to a long and multiply by 1000 to get milliseconds
+  long offset = atol(buffer) * 1000;
+
+  free(buffer);
+
+  return offset;
+}
+
 JNIEXPORT jlong JNICALL newCurrentTimeInMillis(JNIEnv* env, jclass jc) {
   jclass systemClass = (*env)->FindClass(env, "java/lang/System");
   jmethodID getPropertyMethodId = (*env)->GetStaticMethodID(env, systemClass, "getProperty", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;");
@@ -28,16 +56,31 @@ JNIEXPORT jlong JNICALL newCurrentTimeInMillis(JNIEnv* env, jclass jc) {
 
   jstring offsetPropertyName = (*env)->NewStringUTF(env, "faketime.offset.seconds");
   jstring offsetPropertyDefault = (*env)->NewStringUTF(env, "0");
+  jstring filePathPropertyName = (*env)->NewStringUTF(env, "faketime.file.path");
+  //jstring fileCacheDurationPropertyName = (*env)->NewStringUTF(env, "faketime.file.cache_duration");
+  //jstring fileCacheDurationPropertyDefault = (*env)->NewStringUTF(env, "10");
 
   jstring offsetValue = (*env)->CallStaticObjectMethod(env, systemClass, getPropertyMethodId, offsetPropertyName, offsetPropertyDefault);
+  jstring filePath = (*env)->CallStaticObjectMethod(env, systemClass, getPropertyMethodId, filePathPropertyName, NULL);
+  //jstring fileCacheDuration = (*env)->CallStaticObjectMethod(env, systemClass, getPropertyMethodId, fileCacheDurationPropertyName, fileCacheDurationPropertyDefault);
   if ((*env)->ExceptionCheck(env)) return 0;
 
-  const char *offset = (*env)->GetStringUTFChars(env, offsetValue, NULL);
+  jlong offset;
+  if (filePath != NULL) {
+    // If filePath is defined, read the offset from that file (in milliseconds)
+    const char* filepathStr = (*env)->GetStringUTFChars(env, filePath, NULL);
+    offset = readOffsetFromFile(filepathStr);
+    (*env)->ReleaseStringUTFChars(env, filePath, filepathStr);
+  } else {
+    // if not, use the offset from system property "faketime.offset.seconds"
+    const char *offsetStr = (*env)->GetStringUTFChars(env, offsetValue, NULL);
+    offset = atol(offsetStr) * 1000;
+    (*env)->ReleaseStringUTFChars(env, offsetValue, offsetStr);
+  }
 
   jlong realTime = originalMethodCurrentTimeInMillis(env, jc);
-  jlong timeWithOffset = realTime + (atol(offset) * 1000);
+  jlong timeWithOffset = realTime + offset;
 
-  (*env)->ReleaseStringUTFChars(env, offsetValue, offset);
   return timeWithOffset;
 }
 
