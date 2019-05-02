@@ -48,6 +48,8 @@ gcc -fPIC -shared -I $JAVA_HOME/include -I $JAVA_HOME/include/linux -m32 -Wall s
 
 ### Step 2: Use it:
 
+##### Option 1: Control offset with a Java system property
+
 Run your Java program (say, org.test.Main) with these agent-specific extra arguments (see [issue #3](https://github.com/arvindsv/faketime/issues/3)), like this:
 
 ```
@@ -63,5 +65,21 @@ In your Java code, you can set the property **faketime.offset.seconds** to the n
 ```
 System.setProperty("faketime.offset.seconds", "86400");
 ```
+
+OR
+
+##### Option 2: Control offset with an offset file
+
+You can set the property **faketime.offset.file** to point to a file containing the offset in *seconds* (ASCII-encoded). This way you can alter the time using methods external to the Java process, i.e. through a mounted Kubernetes ConfigMap.
+
+```
+java -agentpath:/path/to/the/library/you/got/above \
+  -Dfaketime.offset.file=/path/to/a/text/file/containing/a/number
+  -XX:+UnlockDiagnosticVMOptions \
+  -XX:DisableIntrinsic=_currentTimeMillis \
+  -XX:CompileCommand=exclude,java/lang/System.currentTimeMillis \
+  org.test.Main
+```
+
         
 That's it! Take a look at [FakeTimeTest.java](https://github.com/arvindsv/faketime/blob/master/FakeTimeTest.java) if you need to see some Java code which uses it.

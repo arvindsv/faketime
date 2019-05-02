@@ -5,4 +5,7 @@ gcc -shared -I $JAVA_HOME/include -I $JAVA_HOME/include/linux -m32 -Wall src/Fak
 mkdir -p lib/linux && mv libfaketime.so lib/linux/ 
 
 javac FakeTimeTest.java 
+javac FakeTimeFileTest.java
+
 java -agentpath:./lib/linux/libfaketime.so FakeTimeTest
+java -agentpath:./libfaketime.so FakeTimeFileTest
